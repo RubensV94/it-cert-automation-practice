@@ -19,7 +19,9 @@ def validate_user(username, minlen):
     if username[0].isnumeric():
         return False
     if not username[0].isalpha():
+        """Solves the problem detecting first character as it'ss one letter."""
         return False
+        
     return True
 print(validate_user("blue.kale", 3)) # True
 print(validate_user(".blue.kale", 3)) # Currently True, should be False
